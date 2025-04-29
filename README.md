@@ -1,4 +1,4 @@
-# odin-Etch-a-Sketch 🎨
+# Etch-a-Sketch 🎨
 
 This project is a simple web-based version of the classic Etch-a-Sketch drawing toy. Users can draw by hovering over a grid of squares, with each interaction gradually changing the square's background color and opacity. After 10 interactions or a click, the square resets to white.
 
