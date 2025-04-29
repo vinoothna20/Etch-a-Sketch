@@ -3,30 +3,43 @@ const mainCont = document.querySelector("#container");
 const headerCont = document.createElement("div");
 headerCont.setAttribute("id", "header");
 
-const heading = document.createElement("h2");
+const heading = document.createElement("h1");
 heading.innerText = "Sketch Pad";
 
-const btnEle = document.createElement("button");
-btnEle.innerText = "Change Grid Size";
+const gridSizeBtn = document.createElement("button");
+gridSizeBtn.innerText = "Change Grid Size";
+gridSizeBtn.style.backgroundColor = "aquamarine";
+
+const clearBtn = document.createElement("button");
+clearBtn.innerText = "Clear Grid";
+clearBtn.style.backgroundColor = "yellow";
 
 const noteMsg = document.createElement("p");
-noteMsg.innerText = "Note: You can remove the background color of a square by making 10 intractions or by clciking on it. Njoy... Sketching!";
+noteMsg.innerText = "Note: You can remove the background color of a square by making 10 intractions or by clicking on it. Njoy Sketching...";
 
-headerCont.append(heading, btnEle, noteMsg);
+headerCont.append(heading, gridSizeBtn, clearBtn, noteMsg);
 
 document.body.insertBefore(headerCont, mainCont);
 
-btnEle.addEventListener("click", handleBtn);
+gridSizeBtn.addEventListener("click", handleGridSize);
 
-handleGrid(16);
+let gridSize = 16;
 
-function handleBtn() {
-    const numOfSquares = prompt("Enter number of squares per row");
+clearBtn.addEventListener("click", () => {
+   
 
-    if (numOfSquares > 100 || numOfSquares < 1) {
+    handleGrid(gridSize);
+})
+
+handleGrid(gridSize);
+
+function handleGridSize() {
+    gridSize = prompt("Enter number of squares per row");
+
+    if (gridSize > 100 || gridSize < 1) {
         alert("Enter a number between 1 and 100. Otherwise our sketch pad may crash :(");
     } else {
-        handleGrid(numOfSquares);
+        handleGrid(gridSize);
     }
 }
 
@@ -111,7 +124,7 @@ function handleGrid(num) {
             }
 
             square.style.opacity = `${squareBgOpacity}%`;
-            
+
         }
 
     })

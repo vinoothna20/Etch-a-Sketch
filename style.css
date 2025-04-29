@@ -8,38 +8,35 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: #c34242;
+    padding: 50px;
+    padding-top: 0;
 }
 
-#header {
-    background-color: #c34242;
+#header {   
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 25px 0;
     justify-content: space-between;
 }
 
-#header h2 {
+#header h1 {
     color: white;
     font-weight: bolder;
 }
 
 #header button {
     padding: 8px 20px;
-    background-color: aquamarine;
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    margin: 8px 0;
     cursor: pointer;
-}
-
-#header button:hover {
-    background-color: rgb(29, 253, 179);
+    font-size: 18px;
 }
 
 #header p {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -47,9 +44,6 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    border: 15px solid #c34242;
     border-top: none;
     background-color: white;
 }
@@ -60,6 +54,6 @@ body {
 }
 
 .column {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex: 1;
 }
